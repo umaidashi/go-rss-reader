@@ -1,20 +1,18 @@
 package cmd
 
 import (
+	"grr/gui"
 	"os"
 
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "go-rss-reader",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   "grr",
+	Short: "grr is 'go rss reader'",
+	Run: func(cmd *cobra.Command, args []string) {
+		gui.Start()
+	},
 }
 
 func Execute() {
