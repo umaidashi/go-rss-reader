@@ -1,4 +1,4 @@
-module go-rss-reader
+module grr
 
 go 1.21.5
 

@@ -1,6 +1,6 @@
 package main
 
-import "go-rss-reader/cmd"
+import "grr/cmd"
 
 func main() {
 	cmd.Execute()
