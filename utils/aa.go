@@ -25,6 +25,8 @@ func readFile(fileName string) string {
 	defer file.Close()
 
 	buf := new(bytes.Buffer)
-	buf.ReadFrom(file)
+	if _, err := buf.ReadFrom(file); err != nil {
+		fmt.Println(err)
+	}
 	return buf.String()
 }
